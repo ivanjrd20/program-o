@@ -1,0 +1,64 @@
+#include <stdio.h>
+int main(){
+	char cod;
+	int qnt;
+	float total = 0;
+	
+	printf("   *MENU DA LANCHONETE*\n\n");
+	printf("A - Cachorro Quente \tR$1.20\n");
+	printf("B - Bauru Simples \tR$1.30\n");
+	printf("C - Bauru com Ovo \tR$1.50\n");
+	printf("D - Hamburguer \t\tR$1.20\n");
+	printf("E - Cheeseburguer \tR$1.70\n");
+	printf("F - Suco \t\tR$2.20\n");
+	printf("G - Refrigerante \tR$2.00\n\n");
+	printf("Z - SAIR\n\n");
+	
+	printf("Digite o codigo:\n");
+	scanf("%c", &cod);
+	
+	while( cod != 'Z' && cod != 'z' ){
+		
+		printf("Digite a quantidade:\n");
+		scanf("%d", &qnt);
+		
+		switch(cod){
+			case 'a':
+			case 'A':
+				total = total + qnt * 1.2;
+				break;
+			case 'b':
+			case 'B':
+				total = total + qnt * 1.3;
+				break;
+			case 'c':
+			case 'C':
+				total = total + qnt * 1.5;
+				break;
+			case 'd':
+			case 'D':
+				total = total + qnt * 1.2;
+				break;
+			case 'e':
+			case 'E':
+				total = total + qnt * 1.2;
+				break;
+			case 'f':
+			case 'F':
+				total = total + qnt * 2.2;
+				break;
+			case 'g':
+			case 'G':
+				total = total + qnt * 2.0;
+				break;
+			default: printf("Codigo invalido.\n");
+				break;
+			}
+			
+	printf("Digite o codigo:\n");
+	fflush(stdin);
+	scanf("%c", &cod);
+	printf("O valor do pedido e: %.2f", total);
+}
+	return 0;
+}

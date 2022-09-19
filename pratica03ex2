@@ -1,0 +1,23 @@
+Exercicio 2
+
+#include <stdio.h>
+int main(){
+	  int limitador=0, i;
+
+    printf("Digite ate qual posicao voce quer saber o numero triangular: ");
+    scanf("%d",&limitador);
+        
+		
+		while(limitador < 0 || limitador > 9999){
+        
+		printf("Valor invalido!! Digite um numero entre 0 e 9999: ");
+        scanf("%d", &limitador); 
+  }
+    
+	for(i=1; i<=limitador; i++){
+		printf(" %d ", i*(i+1)/2);
+		
+}
+
+    return 0;
+}
